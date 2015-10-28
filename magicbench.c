@@ -131,7 +131,7 @@ int	allocAndRead(char* path, void** buffer, int size)
   int	rbytes;
 
   rbytes = -1;
-  if ((fd = open("/mnt/loop/sda3_prev_desktop.dd", O_RDONLY)) != -1)
+  if ((fd = open(path, O_RDONLY)) != -1)
     {
       if ((*buffer = malloc(size)) != NULL)
 	rbytes = read(fd, *buffer, size);
