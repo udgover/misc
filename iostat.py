@@ -20,7 +20,7 @@ def humanSize(size):
     elif size >= mb:
         return "{:.1f} {}".format(float(size) / mb, "MiB")
     elif size >= kb:
-        return "{} {}".format(size / kb, "KiB")
+        return "{:.0f} {}".format(size / kb, "KiB")
     else:
         return "{} {}".format(size, "bytes")
 
